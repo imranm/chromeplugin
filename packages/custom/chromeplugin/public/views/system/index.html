@@ -1,0 +1,30 @@
+<div layout="column" flex data-ng-controller="IndexController">
+  <md-content layout="column" layout-padding flex>
+    <md-divider></md-divider>
+    <div layout="row" layout-align="space-around start" layout-padding flex>
+
+      <div class="left" layout="column" layout-align="center center" flex="60">
+        <h1>Welcome to the Chrome extention</h2>
+        <p class="md-headline">URL's by hit count...</p>
+        <div flex>
+        <img src="/meanStarter/assets/img/chrome-md.png"/>
+        </div>
+      </div>
+      <div class="right" layout="column" flex>
+       <div layout="column" style="margin-top:14%" layout-align="end center"></div>
+            <h2 >URL List</h2>
+        <div class="next-steps">
+          <md-list>
+            <md-list-item class="secondary-button-padding" ng-repeat="link in links" ng-click="null">
+              <p>
+                {{link.text}}
+              </p>
+              <md-button class="md-secondary" ng-href="{{link.href}}" target="_blank" title="{{link.href}}">open</md-button>
+            </md-list-item>
+          </md-list>
+        </div>
+        <md-divider></md-divider>
+       </div>
+    </div>
+  </md-content>
+</div>
